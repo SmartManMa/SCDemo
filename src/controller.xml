@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sc-configuration>
+	<!-- interceptor  -->
+	<interceptor name = "log" class = "water.ustc.interceptor.LogInterceptor" predo = "preAction" afterdo = "afterAction">
+	</interceptor>
+	
+	<!-- controller -->
+	<controller>
+		<action name = "login" class = "water.ustc.action.LoginAction" method = "handleLogin">
+			<interceptor-ref name = "log"></interceptor-ref>
+			<result name = "success" type = "forward"  value = "Pages/welcome.jsp"></result>
+			<result name = "failuer" type = "redirect"  value = "Pages/failure.jsp"></result>
+		</action>
+		
+		<action name = "register" class = "water.ustc.action.RegisterAction" method = "handleRegister">
+			<result name = "success" type = "forward"  value = "Pages/welcome.jsp"></result>
+			<!--  -->
+			Test***********
+		</action>
+	</controller>
+</sc-configuration>
