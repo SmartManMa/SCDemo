@@ -7,7 +7,7 @@
 <title>login</title>
 </head>
 <form action="login.sc">
-用	户:<input type="text" name="userbean.userID">
+用	户:<input type="text" name="userID">
     <br/>
 密	码:<input type="text" name="password">
     <br/>

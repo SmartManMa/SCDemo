@@ -12,5 +12,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/simple-controller-3.jar" sourcepath="/SimpleController/src/sc/ustc/util"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar" sourcepath="D:/maven/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.43-bin.jar"/>
+	<classpathentry kind="lib" path="E:/Common Jar/Junit/junit-4.10.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -9,7 +9,7 @@
 	<controller>
 		<action name = "login" class = "water.ustc.action.LoginAction" method = "handleLogin">
 			<interceptor-ref name = "log"></interceptor-ref>
-			<result name = "success" type = "forward"  value = "Pages/welcome.jsp"></result>
+			<result name = "success" type = "forward"  value = "Pages/success_view.xml"></result>
 			<result name = "failuer" type = "redirect"  value = "Pages/failure.jsp"></result>
 		</action>
 		

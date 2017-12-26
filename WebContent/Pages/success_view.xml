@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<view>
+	<header>
+		<title>a viewer in MVC</title>
+	</header>
+	<body>
+		<form>
+			<name>loginForm</name>
+			<action>login.sc</action>
+			<method>post</method>
+			
+			<textView>
+				<name>userName</name>
+				<lable>姓名:	</lable>
+				<value>Water</value>
+			</textView>
+			
+			<textView>
+				<name>age</name>
+				<lable>年龄:	</lable>
+				<value>30</value>
+			</textView>
+			
+			<buttonView>
+				<name>logoutButton</name>
+				<label>LogOut</label>
+			</buttonView>
+			
+		</form>
+	</body>
+</view>
