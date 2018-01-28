@@ -12,7 +12,12 @@ import zhiman.ustc.bean.UserBean;
 
 public class LoginAction implements Action {
 	
-
+	private UserBean userBean;
+	
+	public void setUserBean(UserBean userBean) {
+		this.userBean = userBean;
+	}
+	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, IOException {
 		String name = request.getParameter("userID");
@@ -23,14 +28,19 @@ public class LoginAction implements Action {
 			return "failuer";
 		}
 	}
+	
 	public String handleLogin(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, IOException, SQLException {
 		String name = request.getParameter("userID");
 		String pwd = request.getParameter("password");
-		System.out.println(name+"----------"+pwd);
-		UserBean user = new UserBean();
-		user.setUserName(name);
-		user.setUserPass(pwd);
-		boolean isSuccess = user.signIn();
+		
+		//注释下面此行
+		//userBean = new UserBean();
+		if ( userBean != null ) {
+			System.out.println("依赖注入成功");
+		}
+		userBean.setUserName(name);
+		userBean.setUserPass(pwd);
+		boolean isSuccess = userBean.signIn();
 		if ( isSuccess ) {
 			return SUCCESS;
 		} else 

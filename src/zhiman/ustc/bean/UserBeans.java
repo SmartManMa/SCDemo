@@ -1,11 +1,17 @@
 package zhiman.ustc.bean;
 
 import java.sql.SQLException;
-import javax.sql.RowSet;
-import zhiman.ustc.dao.UserDAO;
 
-public class UserBean {
-	
+import javax.sql.RowSet;
+
+
+import zhiman.ustc.dao.UserDAOs;
+
+public class UserBeans {
+	private static String DRIVER = "com.mysql.jdbc.Driver";
+	private static String DB_URL = "jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8";
+	private static String DB_NAME = "zhiman";
+	private static String DB_PASS = "1234";
 	
 	private String userID;
 	private String userName;
@@ -31,7 +37,10 @@ public class UserBean {
 	}
 	
 	public boolean signIn() throws SQLException{
-		RowSet rs = (RowSet) new UserDAO().query();
+
+		String querySql = "select * from userlist where name = \""+userName+"\" " ;
+		UserDAOs dao = new UserDAOs(DRIVER, DB_URL, DB_NAME, DB_PASS);
+		RowSet rs = (RowSet) dao.query(querySql);
 		//没有匹配的用户名，返回false
 		if ( rs == null ) {
 			return false;
