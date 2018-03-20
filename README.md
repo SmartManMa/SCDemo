@@ -1,1 +1,1 @@
-# SCDemo 2017 12 12
+# SCDemo MVC framework SimpleController Demo
