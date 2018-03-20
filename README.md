@@ -1,1 +1,2 @@
 # SCDemo MVC framework SimpleController Demo
+## SCDemo是使用SimpleController控制器的一个例子，它用来验证SimpleController的是否可以正确工作，以及使用SimpleController时该如何配置环境。
